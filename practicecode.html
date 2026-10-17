@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello po idol 🎀</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffe1ef, #ffc5df, #fff0f6);
+    color: #b64e80;
+}
+
+.heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    opacity: .65;
+    pointer-events: none;
+    animation: floatUp 9s linear infinite;
+}
+
+.heart:nth-child(1) { left: 8%; }
+.heart:nth-child(2) { left: 28%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 65%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 88%; animation-delay: 1s; }
+
+@keyframes floatUp {
+    from { transform: translateY(0) rotate(0deg); }
+    to { transform: translateY(-120vh) rotate(360deg); }
+}
+
+.card {
+    width: min(100%, 390px);
+    padding: 40px 30px;
+    text-align: center;
+    background: rgba(255,255,255,.82);
+    border: 2px solid white;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px #d66b9b35;
+    animation: appear .8s ease;
+    z-index: 1;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bow {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    font-size: 36px;
+    color: #e76ca5;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    color: #a45c80;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 14px;
+    border: 1.5px solid #f4b2d0;
+    border-radius: 15px;
+    outline: none;
+    background: #fff8fb;
+    color: #b5457b;
+    font-family: inherit;
+    text-align: center;
+    font-size: 15px;
+}
+
+input:focus {
+    border-color: #e76ca5;
+    box-shadow: 0 0 12px #f7b6d4;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f49bc4, #e76ca5);
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .25s, box-shadow .25s;
+    box-shadow: 0 5px 15px #e76ca550;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #e76ca570;
+}
+
+#message {
+    min-height: 22px;
+    margin: 12px 0 0;
+    font-size: 13px;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #cc8aaa;
+}
+
+@media (max-width: 400px) {
+    .card { padding: 32px 22px; }
+    h1 { font-size: 31px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart">♡</div>
+<div class="heart">💗</div>
+<div class="heart">🎀</div>
+<div class="heart">♡</div>
+
+<main class="card">
+    <div class="bow">🎀</div>
+
+    <h1>hello po</h1>
+
+    <p>
+        A little secret is waiting for you.<br>
+        Enter the password to open it ♡
+    </p>
+
+    <form id="loginForm">
+        <input
+            type="password"
+            id="password"
+            placeholder="enter secret password..."
+            autocomplete="off"
+            required
+        >
+
+        <button type="submit">unlock daaa secret ♡</button>
+    </form>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <div class="footer">xD </div>
+</main>
+
+<script>
+const correctPassword = "strawberryshortcake143";
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const enteredPassword =
+        document.getElementById("password").value;
+
+    const message = document.getElementById("message");
+
+    if (enteredPassword ===correctPassword ) {
+        window.location.href = "ayaayaya.html";
+    } else {
+        message.textContent = "wrong password, bff! try again 💔";
+        document.getElementById("password").value = "";
+    }
+});
+</script>
+
+</body>
+</html>

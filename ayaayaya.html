@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secret para sayo ok 💗</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 35px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #a64d79;
+    background: linear-gradient(135deg, #ffe0ef, #ffc4df, #fff2f7);
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    font-size: 24px;
+    opacity: .6;
+    pointer-events: none;
+    animation: floatUp 10s linear infinite;
+}
+
+.heart:nth-child(1) { left: 8%; }
+.heart:nth-child(2) { left: 30%; animation-delay: 3s; }
+.heart:nth-child(3) { left: 65%; animation-delay: 1s; }
+.heart:nth-child(4) { left: 88%; animation-delay: 5s; }
+
+@keyframes floatUp {
+    from { transform: translateY(0) rotate(0deg); }
+    to { transform: translateY(-120vh) rotate(360deg); }
+}
+
+.card {
+    width: min(100%, 570px);
+    position: relative;
+    z-index: 1;
+    padding: 42px 32px;
+    text-align: center;
+    background: rgba(255,255,255,.84);
+    border: 2px solid white;
+    border-radius: 32px;
+    box-shadow: 0 18px 55px #d66b9b35;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bow {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(30px, 7vw, 44px);
+    font-weight: 400;
+    color: #e76ca5;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.letter {
+    padding: 25px 21px;
+    margin: 24px 0;
+    border: 1px dashed #ee9fc2;
+    border-radius: 22px;
+    background: #fff5fa;
+    line-height: 2;
+    font-size: 15px;
+    white-space: pre-line;
+}
+
+.letter-title {
+    color: #e76ca5;
+    font-family: 'Pacifico', cursive;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.music-box {
+    padding: 22px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #fff0f7, #ffe1ef);
+    margin-top: 24px;
+}
+
+.music-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.music-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.music-note {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+audio {
+    width: 100%;
+    height: 42px;
+    accent-color: #e76ca5;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 24px;
+    color: #c45b8d;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.back:hover {
+    color: #e76ca5;
+}
+
+.footer {
+    margin-top: 27px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #cc8aaa;
+}
+
+@media (max-width: 420px) {
+    .card { padding: 32px 20px; }
+    .letter { padding: 20px 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart">♡</div>
+<div class="heart">💗</div>
+<div class="heart">🎀</div>
+<div class="heart">♡</div>
+
+<main class="card">
+
+    <div class="bow">💌</div>
+
+    <h1>hello bff!</h1>
+
+    <p class="subtitle">
+        you unlocked your little surprise!<br>
+        dahil dyan nasa stage 2 na tayo ng friendship natin ♡
+    </p>
+
+    <section class="letter">
+        <div class="letter-title">zzz.. ♡</div>
+
+         🎀
+Sana po maging close po tayo po idol
+         💗
+
+        
+
+        <br>
+        <strong>with lots of love, aya ♡</strong>
+    </section>
+
+    <section class="music-box">
+        <div class="music-icon">🎧</div>
+        <div class="music-title">song para sayo </div>
+        <p class="music-note">
+          zzzz  ♡
+        </p>
+
+       <audio controls>
+  <source src="c:\Users\johnl\Downloads\Frank Ocean - Nights.mp3" type="audio/ogg">
+Your browser does not support the audio element.
+</audio>
+
+    </section>
+
+    <a class="back" href="practicecode.html">♡ back to the password page</a>
+
+    <div class="footer"> yayayay bye 🎀</div>
+
+</main>
+
+</body>
+</html>
